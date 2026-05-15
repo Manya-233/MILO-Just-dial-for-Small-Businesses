@@ -137,6 +137,8 @@
             border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
+            transition: 0.3s ease ;
+
         }
 
         .learnbtn {
@@ -147,6 +149,22 @@
             border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
+            transition: 0.3s ease ;
+        }
+
+        .servicebtn {
+            padding: 14px 28px;
+            background-color: transparent;
+            border: 2px solid rgb(179, 125, 211);
+            color: rgb(179, 125, 211);
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease ;
+        }
+        .explorebtn:hover, .learnbtn:hover, .servicebtn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
         }
 
         /* LOGIN BOX */
@@ -332,9 +350,10 @@
             </p>
 
             <div class="hero-buttons">
-                <button class="explorebtn">Explore Businesses</button>
+                <button class="servicebtn" onclick="window.location.href='services.html'">Our Service</button>
+                <button class="explorebtn" onclick="window.location.href='extendservice.html'">Explore Businesses</button>
 
-                <button class="learnbtn">Learn More</button>
+                <button class="learnbtn" onclick="window.location.href='about.html'">About Us</button>
             </div>
 
         </div>
@@ -345,15 +364,15 @@
 
             <h2>Welcome to MILO</h2>
 
-            <input type="email" placeholder="Enter Email">
+            <input type="email" id="email" placeholder="Enter Email">
 
-            <input type="password" placeholder="Enter Password">
+            <input type="password" id="password" placeholder="Enter Password">
 
-            <button>Login</button>
+            <button onclick="loginUser()">Login</button>
 
             <div class="signuptext">
                 New User?
-                <a href="#">Create Account</a>
+                <a href="#" onclick="toggleSignup()">Create Account</a>
             </div>
 
         </div>
@@ -415,6 +434,65 @@
         </p>
 
     </footer>
+
+    <!--JAVASCRIPT-->
+<script>
+    let isSignup = false;
+
+    function toggleSignup() {
+        isSignup = !isSignup;
+
+        const button = document.querySelector(".loginbox button");
+        const heading = document.querySelector(".loginbox h2");
+        const link = document.querySelector(".signuptext");
+
+        if (isSignup) {
+            heading.innerText = "Create Account";
+            button.innerText = "Sign Up";
+            link.innerHTML = `Already have an account? <a href="#" onclick="toggleSignup()">Login</a>`;
+        } else {
+            heading.innerText = "Welcome to MILO";
+            button.innerText = "Login";
+            link.innerHTML = `New User? <a href="#" onclick="toggleSignup()">Create Account</a>`;
+        }
+    }
+
+    function loginUser() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    if (!email || !password) {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    if (isSignup) {
+        // SAVE USER (Signup)
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPassword", password);
+
+        alert("Account created successfully!");
+
+        // ✅ REDIRECT AFTER SIGNUP
+        window.location.href = "extendservice.html";
+
+    } else {
+        // LOGIN CHECK
+        const storedEmail = localStorage.getItem("userEmail");
+        const storedPassword = localStorage.getItem("userPassword");
+
+        if (email === storedEmail && password === storedPassword) {
+            alert("Login successful! Welcome to MILO 🚀");
+
+            // ✅ REDIRECT AFTER LOGIN
+            window.location.href = "extendservice.html";
+
+        } else {
+            alert("Invalid credentials!");
+        }
+    }
+}   
+</script>
 
 </body>
 

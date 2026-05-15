@@ -30,7 +30,7 @@ body {
 header {
   text-align: center;
   padding: 2.5rem 1rem;
-  background: linear-gradient(135deg, #a47fd8, #7f5fcf);
+  background: linear-gradient(135deg, rgb(179, 125, 211), rgb(179, 125, 211));
 }
 
 header h1 {
@@ -56,7 +56,7 @@ header h1 {
 }
 
 .category h2 {
-  color: #7f5fcf;
+  color: rgb(179, 125, 211);
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.8rem;
@@ -100,7 +100,26 @@ header h1 {
 }
 
 .category ul li a:hover {
-  color: #7f5fcf;
+  color: rgb(179, 125, 211);
+}
+
+.view-more {
+  text-align: center;
+  margin: 4rem 0 4rem;
+}
+
+.view-more a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: rgb(179, 125, 211);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.view-more a:hover {
+  background: rgb(179, 125, 211);
 }
 
   </style>
@@ -176,6 +195,10 @@ header h1 {
         </ul>
       </div>
     </section>
+
+    <div class="view-more">
+      <a href="index.html">Login/Signup to continue</a>
+    </div>
   </main>
 </body>
 </html>
