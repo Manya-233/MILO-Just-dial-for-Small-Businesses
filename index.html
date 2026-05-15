@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILO</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 85px;
+            width: 100%;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+        }
+
+        .leftnav {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 34px;
+            font-weight: bold;
+            color: rgb(179, 125, 211);
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 13px;
+            color: rgb(179, 125, 211);
+            margin-left: 10px;
+            margin-top: 8px;
+        }
+
+        .searcharea {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location,
+        .search {
+            height: 45px;
+            border: none;
+            border-radius: 6px;
+            padding-left: 15px;
+            background-color: #f1f1f1;
+            font-size: 15px;
+        }
+
+        .location {
+            width: 220px;
+        }
+
+        .search {
+            width: 420px;
+        }
+
+        .button {
+            height: 45px;
+            width: 150px;
+            border: none;
+            border-radius: 6px;
+            background-color: rgb(179, 125, 211);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: rgb(179, 125, 211);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 80vh;
+            width: 100%;
+            background: linear-gradient(to right, #f4ece4, #f8f5f2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px 80px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            color: rgb(179, 125, 211);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: rgb(179, 125, 211);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .explorebtn {
+            padding: 14px 28px;
+            background-color: rgb(179, 125, 211);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .learnbtn {
+            padding: 14px 28px;
+            background-color: transparent;
+            border: 2px solid rgb(179, 125, 211);
+            color: rgb(179, 125, 211);
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* LOGIN BOX */
+
+        .loginbox {
+            width: 340px;
+            background-color: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .loginbox h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: rgb(179, 125, 211);
+        }
+
+        .loginbox input {
+            width: 100%;
+            height: 45px;
+            margin-bottom: 18px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding-left: 15px;
+            font-size: 15px;
+        }
+
+        .loginbox button {
+            width: 100%;
+            height: 45px;
+            background-color: rgb(179, 125, 211);
+            border: none;
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signuptext {
+            text-align: center;
+            margin-top: 15px;
+            color: gray;
+        }
+
+        .signuptext a {
+            color: rgb(179, 125, 211);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 70px 60px;
+            background-color: #ffffff;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 40px;
+            color: rgb(179, 125, 211);
+            margin-bottom: 50px;
+        }
+
+        .servicecards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            background-color: #faf7f3;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: rgb(179, 125, 211);
+            font-size: 24px;
+        }
+
+        .card p {
+            color: #9885a5;
+            line-height: 1.7;
+        }
+
+
+        /* FOOTER */
+
+        .footer {
+            background-color: rgb(149, 99, 179);
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .footer p {
+            margin-top: 10px;
+            color: #ddd;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .searcharea {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 45px;
+            }
+
+            .navbar {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="leftnav">
+            <div class="logo">MILO</div>
+            <div class="tagline">Connecting Local India</div>
+        </div>
+
+        <div class="searcharea">
+            <input type="text" placeholder="Select Location" class="location">
+
+            <input type="search" placeholder="Search artisans, businesses, crafts..." class="search">
+
+            <button class="button">Login / Sign Up</button>
+        </div>
+
+    </div>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Discover India's Local Talent & Small Businesses
+            </h1>
+
+            <p>
+                MILO is a platform that connects local artisans, craftsmen,
+                handmade creators, and small businesses from rural and urban
+                India with customers across the country. We help local talent
+                grow digitally while preserving creativity, culture, and
+                craftsmanship.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="explorebtn">Explore Businesses</button>
+
+                <button class="learnbtn">Learn More</button>
+            </div>
+
+        </div>
+
+        <!-- LOGIN BOX -->
+
+        <div class="loginbox">
+
+            <h2>Welcome to MILO</h2>
+
+            <input type="email" placeholder="Enter Email">
+
+            <input type="password" placeholder="Enter Password">
+
+            <button>Login</button>
+
+            <div class="signuptext">
+                New User?
+                <a href="#">Create Account</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SERVICES SECTION -->
+
+    <section class="services">
+
+        <h2>What MILO Offers</h2>
+
+        <div class="servicecards">
+
+            <div class="card">
+                <h3>Local Artisans</h3>
+
+                <p>
+                    Discover handmade products and creative work from local
+                    artisans across India.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Small Businesses</h3>
+
+                <p>
+                    Support local businesses by exploring nearby shops,
+                    services, and independent sellers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Reach</h3>
+
+                <p>
+                    Helping rural and urban creators connect with customers
+                    through a simple digital platform.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>MILO</h2>
+
+        <p>
+            Connecting Rural & Urban India Through Local Businesses
+        </p>
+
+        <p>
+            © 2026 MILO | Instagram | Twitter (X) | Threads | YouTube
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Services</title>
+  <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #faf8fd;
+  color: #333;
+  line-height: 1.6;
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.istockphoto.com/id/479431428/photo/puppets-many-hanging-on-string-rajasthan-india.jpg?s=1024x1024&w=is&k=20&c=41s-qB9AUUJT8uBHUFGRmtd8Z380Dstm5vUgEZtUsqk=") no-repeat center center;
+  background-size: 100% auto;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(135deg, #a47fd8, #7f5fcf);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #f4effc;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #f7e0e0;
+}
+
+.extended-services {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.category h2 {
+  color: #7f5fcf;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+   background: white;
+  border-radius: 15px;
+  padding: 2rem 1.2rem;
+  box-shadow: 0 6px 14px rgba(127, 95, 207, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category h2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(127, 95, 207, 0.2);
+}
+
+.category ul {
+  list-style:none;
+   background: white;
+  border-radius: 30px;
+  padding: 2rem 1.2rem;
+  box-shadow: 0 6px 14px rgba(127, 95, 207, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category ul :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(127, 95, 207, 0.2);
+}
+
+.category ul li {
+  margin: 0.4rem 0;
+}
+
+.category ul li a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.category ul li a:hover {
+  color: #7f5fcf;
+}
+
+  </style>
+</head>
+
+<body>
+    <div class="overlay"></div>
+    <br>
+<header>
+    <h1>Discover Everything We Offer </h1>
+    <p class="subtitle">Browse through our full range of categories</p>
+  </header>
+
+  <main>
+    <section class="extended-services">
+      <div class="category">
+        <h2>🛍 Handmade & Crafts</h2>
+        <ul>
+          <li><a href="#">Pottery & Clay Art</a></li>
+          <li><a href="#">Weaving & Textiles</a></li>
+          <li><a href="#">Wood Carving</a></li>
+          <li><a href="#">Hand-painted Items</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>🥖 Local Food & Shops</h2>
+        <ul>
+          <li><a href="#">Bakeries</a></li>
+          <li><a href="#">Street Food Vendors</a></li>
+          <li><a href="#">Spices & Condiments</a></li>
+          <li><a href="#">Organic Stores</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>🔧 Everyday Services</h2>
+        <ul>
+          <li><a href="#">Plumbers</a></li>
+          <li><a href="#">Electricians</a></li>
+          <li><a href="#">Carpenters</a></li>
+          <li><a href="#">Tailors</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>🎉 Events & Culture</h2>
+        <ul>
+          <li><a href="#">Festivals</a></li>
+          <li><a href="#">Local Fairs</a></li>
+          <li><a href="#">Cultural Shows</a></li>
+          <li><a href="#">Workshops</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>🌱 Farm & Fresh Produce</h2>
+        <ul>
+          <li><a href="#">Farmers Markets</a></li>
+          <li><a href="#">Organic Vegetables</a></li>
+          <li><a href="#">Fruit Sellers</a></li>
+          <li><a href="#">Dairy & Poultry</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <h2>💡 Skill & Learning</h2>
+        <ul>
+          <li><a href="#">Art Classes</a></li>
+          <li><a href="#">Music & Dance</a></li>
+          <li><a href="#">Handicraft Training</a></li>
+          <li><a href="#">Workshops</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

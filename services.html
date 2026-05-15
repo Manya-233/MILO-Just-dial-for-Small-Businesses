@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+  <style>
+
+  body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #faf8fd;
+  color: #333;
+  line-height: 1.6;
+}
+
+.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.istockphoto.com/id/479431428/photo/puppets-many-hanging-on-string-rajasthan-india.jpg?s=1024x1024&w=is&k=20&c=41s-qB9AUUJT8uBHUFGRmtd8Z380Dstm5vUgEZtUsqk=") no-repeat center center;
+  background-size: 100% auto;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: linear-gradient(135deg, #a47fd8, #7f5fcf);
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #f4effc;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #f7e0e0;
+}
+
+.intro {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: #313131;
+  font-weight: 800;
+}
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+
+
+.img-placeholder {
+  font-size: 2rem;
+  color: #7f5fcf;
+  background: #ede5f7;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+
+.view-more {
+  text-align: center;
+  margin: 4rem 0 4rem;
+}
+
+.view-more a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: #7f5fcf;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.view-more a:hover {
+  background: #5e3fb2;
+}
+
+
+.flip-card {
+  background: transparent;
+  width: 100%;
+  max-width: 220px;
+  height: 180px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(127, 95, 207, 0.12);
+  backface-visibility: hidden;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front {
+  background: white;
+}
+
+.flip-card-back {
+  background: #7f5fcf;
+  color: white;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+<br>
+<header>
+    <h1>Our Services</h1>
+    <p class="subtitle">Connecting you with local businesses, artisans & everyday needs</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>
+        From handmade crafts to everyday services, cultural events, fresh produce and learning opportunities, we bring local communities and their unique talents closer to you and make exploring businesses simple and meaningful.<br> 
+        Hover on the cards below to learn more about each category.
+      </p>
+    </section>
+
+    <section class="services-grid">
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">🛍</div>
+            <h2>Handmade & Crafts</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>Explore pottery, weaving, woodwork and hand-painted crafts that carry cultural heritage and modern creativity.<br>Each product tells a story of skill, patience, and tradition passed down through generations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">🥖</div>
+            <h2>Local Food & Shops</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>Discover bakeries, street food vendors, spice sellers, and organic stores that bring fresh flavors to your table.<br>Taste authentic recipes while supporting the small shops that keep culture alive.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">🔧</div>
+            <h2>Everyday Services</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>From plumbers to tailors, find trusted professionals for your daily needs with ease.<br>Reliable local services ensure comfort and convenience right at your doorstep.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">🎉</div>
+            <h2>Events & Culture</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>Join festivals, fairs, cultural shows, and workshops that celebrate tradition and creativity.<br>
+            Experience the joy of communities coming together to share stories, food, and art.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">🌱</div>
+            <h2>Farm & Fresh Produce</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>Connect with farmers and vendors for organic vegetables, fruits, dairy, and fresh market produce.
+              <br>Support sustainable living while enjoying healthy and seasonal local goods.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="img-placeholder">💡</div>
+            <h2>Skill & Learning</h2>
+          </div>
+          <div class="flip-card-back">
+            <p>Take art classes, music lessons, handicraft training, or join local workshops to learn new skills.<br>Grow your creativity and knowledge while strengthening community bonds.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <br> 
+
+  
+    <div class="view-more">
+      <a href="extendservice.html">View All Services →</a>
+    </div>
+  </main>
+</body>
+</html>
