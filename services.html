@@ -13,6 +13,8 @@
   background: #faf8fd;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden ;
+  width: 100 %;
 }
 
 .overlay::before {
@@ -23,7 +25,7 @@
   width: 100%;
   height: 100%;
   background: url("https://media.istockphoto.com/id/479431428/photo/puppets-many-hanging-on-string-rajasthan-india.jpg?s=1024x1024&w=is&k=20&c=41s-qB9AUUJT8uBHUFGRmtd8Z380Dstm5vUgEZtUsqk=") no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover ;
   opacity: 0.4;
   z-index: -1;
 }
@@ -55,17 +57,6 @@ header h1 {
   color: #313131;
   font-weight: 800;
 }
-
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
-
 
 
 .img-placeholder {
@@ -104,11 +95,9 @@ header h1 {
 
 .flip-card {
   background: transparent;
-  width: 100%;
-  max-width: 220px;
+  width: 100 %;
   height: 180px;
   perspective: 1000px;
-  margin: auto;
 }
 
 .flip-card-inner {
@@ -155,13 +144,102 @@ header h1 {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
   max-width: 1100px;
   margin: 3rem auto;
   padding: 0 1.5rem;
+  align-items: stretch ;
 }
 
+/*  RESPONSIVE DESIGN  */
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .intro {
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .flip-card {
+    height: 210px;
+  }
+}
+    
+/* MOBILE DEVICES */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 1.8rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .intro {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+    font-size: 0.92rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .flip-card {
+    width: 100%;
+    height: 220px;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    padding: 1.2rem;
+  }
+
+  .img-placeholder {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+
+  .view-more {
+    margin: 3rem 1rem;
+  }
+
+  .view-more a {
+    display: inline-block;
+    width: 100%;
+    max-width: 280px;
+    padding: 0.9rem 1rem;
+  }
+}
   </style>
 </head>
 
