@@ -18,7 +18,8 @@ body {
   color: #333;
   line-height: 1.6;
   background: #fdfcfe;
-  overflow-x: hidden;
+  overflow-x: hidden; 
+  width: 100 %;
 }
 
 .overlay::before {
@@ -26,10 +27,10 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100 %;
+  height: 100 %;
   background: url("https://media.istockphoto.com/id/471856413/photo/ancient-dhokra-art.jpg?s=1024x1024&w=is&k=20&c=GZDVwFun5C4nSXh54Y5ocO_2Qbnf3_8ovzpbGviO82g=") no-repeat center center;
-  background-size: 100% auto;
+  background-size: cover;
   opacity: 0.5;
   z-index: -1;
 }
@@ -86,6 +87,7 @@ main {
 
 .image {
   flex: 1;
+  min-width: 280 px ;
   display: flex;
   justify-content: center;
 }
@@ -107,7 +109,96 @@ main {
   color: #444;
   font-size: 1rem;
 }
-  
+
+/*  RESPONSIVE DESIGN  */
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  header {
+    padding: 2.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content.reverse {
+    flex-direction: column;
+  }
+
+  .text,
+  .image {
+    width: 100%;
+  }
+
+  .image img {
+    max-width: 80%;
+  }
+
+  .about {
+    padding: 1.8rem;
+  }
+}
+    
+/* MOBILE DEVICES */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 2rem 1rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  header h1 {
+    font-size: 1.7rem;
+    line-height: 1.3;
+  }
+
+  header .subtitle {
+    font-size: 0.95rem;
+  }
+
+  main {
+    margin: 2rem auto;
+    padding: 0 0.8rem;
+  }
+
+  .about {
+    padding: 1.2rem;
+    border-radius: 15px;
+  }
+
+  .about h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .image img {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+}
+    
   </style>
 </head>
 
